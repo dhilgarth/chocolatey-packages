@@ -3,7 +3,7 @@
   <metadata>
     <id>procmon</id>
     <title>Process Monitor</title>
-    <version>3.01</version>
+    <version>3.1</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>d.hilgarth</owners>
     <summary>Process Monitor is an advanced monitoring tool for Windows</summary>
