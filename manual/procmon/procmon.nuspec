@@ -13,7 +13,7 @@
     <copyright></copyright>
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/dhilgarth/chocolatey-packages/c293695f7d9a3b6cc94ae6f8fdad6a7967211786/procmon/packageIcon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/dhilgarth/chocolatey-packages/e59b6fcf7f2b3bc3e500ce4438fb85e11f0aaa49/icons/procmon.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
