@@ -1,5 +1,5 @@
 $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Install-ChocolateyZipPackage 'procmon' 'http://download.sysinternals.com/files/ProcessMonitor.zip' $installDir
+Install-ChocolateyZipPackage '{{PackageName}}' '{{DownloadUrl}}' $installDir
 
 $programs = [environment]::GetFolderPath([environment+specialfolder]::Programs)
 $shortcutPath = Join-Path "$programs" "Sysinternals"

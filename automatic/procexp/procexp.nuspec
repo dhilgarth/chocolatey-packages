@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>procexp</id>
+    <id>{{PackageName}}</id>
     <title>Process Explorer</title>
-    <version>16.04</version>
+    <version>{{PackageVersion}}</version>
     <authors>Mark Russinovich</authors>
     <owners>d.hilgarth</owners>
     <summary>Process Explorer shows you information about which handles and DLLs processes have opened or loaded.</summary>
