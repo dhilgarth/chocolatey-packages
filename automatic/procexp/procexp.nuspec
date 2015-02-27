@@ -23,7 +23,4 @@ The unique capabilities of Process Explorer make it useful for tracking down DLL
   <files>
     <file src="tools\**" target="tools" />
   </files>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
 </package>

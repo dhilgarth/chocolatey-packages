@@ -19,7 +19,4 @@
   <files>
     <file src="tools\**" target="tools" />
   </files>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
 </package>
