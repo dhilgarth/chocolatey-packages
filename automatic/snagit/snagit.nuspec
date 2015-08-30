@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>{{PackageName}}</id>
+        <version>{{PackageVersion}}</version>
+        <title>Snagit</title>
+        <authors>TechSmith</authors>
+        <licenseUrl>http://www.techsmith.com/snagit-eula.html</licenseUrl>
+        <projectUrl>http://www.techsmith.com/snagit.html</projectUrl>
+        <iconUrl>https://cdn.rawgit.com/DavidPx/chocolatey-packages/master/TechsmithSnagit/SnagitIcon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Snagit is a image capture program from TechSmith.  It has a variety of capture modes (object, window, area, etc.) as well as video capture.  It also features a full-featured capture editing tool.</description>
+        <releaseNotes>This package installs version {{PackageVersion}} of the program.</releaseNotes>
+        <language>es-US</language>
+        <tags>screenshot screen capture</tags>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
