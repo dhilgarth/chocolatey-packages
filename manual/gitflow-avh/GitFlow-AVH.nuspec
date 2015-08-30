@@ -20,7 +20,8 @@
     <copyright>Copyright: Copyright 2012 - 2015 Peter van der Does. Copyright 2010 Vincent Driessen. All rights reserved.</copyright>
     <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh</tags>
     <dependencies>
-      <dependency id="git-flow-dependencies" />
+      <dependency id="git" />
+      <dependency id="getopt" />
     </dependencies>
   </metadata>
 </package>
