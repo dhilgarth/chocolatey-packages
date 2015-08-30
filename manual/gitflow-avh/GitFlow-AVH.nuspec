@@ -17,7 +17,6 @@
       NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
       NOTE: This package is based on Devbox-gitflow.</description>
     <summary>A collection of Git extensions to provide high-level repository operations.</summary>
-    <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright: Copyright 2012 - 2015 Peter van der Does. Copyright 2010 Vincent Driessen. All rights reserved.</copyright>
     <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh</tags>
     <dependencies>
