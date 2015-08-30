@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>gitflow-avh</id>
+    <version>0.0.0</version>
+    <title>git-flow AVH Edition</title>
+    <authors>Vincent Driessen, Peter van der Does</authors>
+    <owners>Daniel Hilgarth</owners>
+    <licenseUrl>https://github.com/petervanderdoes/gitflow/blob/develop/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/petervanderdoes/gitflow</projectUrl>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-GitFlow/Devbox-GitFlow.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Git-Flow is a collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+      The AVH Edition adds more functionality to the existing git-flow and several of the internal commands have been rewritten to speed up the software.
+    
+      This package always installs the latest version available online. Therefore, package version number is marked as 0.0.0
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.</description>
+    <summary>A collection of Git extensions to provide high-level repository operations.</summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright: Copyright 2012 - 2015 Peter van der Does. Copyright 2010 Vincent Driessen. All rights reserved.</copyright>
+    <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh</tags>
+    <dependencies>
+      <dependency id="git-flow-dependencies" />
+    </dependencies>
+  </metadata>
+</package>
