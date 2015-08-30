@@ -7,6 +7,7 @@ This repository hosts the code of the Chocolatey packages I am a maintainer of. 
     - Sysinternals Process Explorer (procexp)
     - Sysinternals Process Monitor (procmon)
     - TechSmith SnagIt (snagit)
+    - Util Linux getopt (getopt)
 - Manual Packages
     - git-flow AVH Edition (gitflow-avh)
 
