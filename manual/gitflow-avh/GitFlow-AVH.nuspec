@@ -14,7 +14,8 @@
       The AVH Edition adds more functionality to the existing git-flow and several of the internal commands have been rewritten to speed up the software.
     
       This package always installs the latest version available online. Therefore, package version number is marked as 0.0.0
-      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.</description>
+      NOTE: Automatic uninstall procedure is included in this package, so you don't need to manually reverse whatever actions installer did.
+      NOTE: This package is based on Devbox-gitflow.</description>
     <summary>A collection of Git extensions to provide high-level repository operations.</summary>
     <releaseNotes>Initial release</releaseNotes>
     <copyright>Copyright: Copyright 2012 - 2015 Peter van der Does. Copyright 2010 Vincent Driessen. All rights reserved.</copyright>
