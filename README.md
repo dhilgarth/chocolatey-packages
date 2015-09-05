@@ -8,6 +8,7 @@ This repository hosts the code of the Chocolatey packages I am a maintainer of. 
     - Sysinternals Process Monitor (procmon)
     - TechSmith SnagIt (snagit)
     - Util Linux getopt (getopt)
+    - Microsoft Office Professional Plus 2013 (OfficeProPlus2013)
 - Manual Packages
     - git-flow AVH Edition (gitflow-avh)
 
