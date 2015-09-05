@@ -48,3 +48,6 @@ if (Test-Path $gitBin64)
 {
     Start-ChocolateyProcessAsAdmin "/c `"`"$exeInstallGitFlow`" `"$gitBin64`"`"" -exe "$env:comspec" -minimized
 }
+
+Write-Host "`nGit-Flow: Setting up bash completion...`n"  -foregroundcolor yellow
+wget https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash -OutFile (Join-Path "$gitDir" "etc\profile.d\git-flow-completion.sh")
