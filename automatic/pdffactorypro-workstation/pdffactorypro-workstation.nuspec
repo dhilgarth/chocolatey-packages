@@ -16,7 +16,9 @@ You can pass the following parameters:
 * Name of the license holder - this is ignored if no license code has been specified: `/name:&lt;your name>`
         
 Available languages are:
-        
+
+* Chinese (Simplified): `zh-CN`
+* Chinese (Traditional): `zh-TW`
 * Czech: `cs`
 * Danish: `da`
 * Dutch: `nl`

@@ -6,7 +6,7 @@ $validExitCodes = @(0)
 
 $packageParameters = $env:chocolateyPackageParameters;
 
-$languageMap = @{ "cs" = "0405"; "da" = "0406"; "nl" = "0413"; "en" = "0409"; "fr" = "040c"; "de" = "0407"; "it" = "0410"; "ja" = "0411"; "pl" = "0415"; "pt" = "0416"; "ru" = "0419"; "sk" = "041b"; "es" = "0c0a"; "sv" = "041d"; }
+$languageMap = @{ "zh-CN" = "0804"; "zh-TW" = "0404"; "cs" = "0405"; "da" = "0406"; "nl" = "0413"; "en" = "0409"; "fr" = "040c"; "de" = "0407"; "it" = "0410"; "ja" = "0411"; "pl" = "0415"; "pt" = "0416"; "ru" = "0419"; "sk" = "041b"; "es" = "0c0a"; "sv" = "041d"; }
 
 $arguments = @{};
 
