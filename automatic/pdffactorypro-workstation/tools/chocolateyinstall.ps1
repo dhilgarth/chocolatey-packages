@@ -47,8 +47,9 @@ if($arguments.ContainsKey("lang")) {
     $silentArgs = $silentArgs + " /lang=" + $languageMap[$lang]
 }
 
+$iniFile = Join-Path $extractDir "fpp5.ini"
+
 if($arguments.ContainsKey("license")) {
-    $iniFile = Join-Path $extractDir "fpp5.ini"
     $licenseCode = $arguments["license"]
     $name = ""
     if($arguments.ContainsKey("name")) { $name = $arguments["name"] }
@@ -59,6 +60,16 @@ Name=$name
 SerialNumber=$licenseCode
 "@
     $iniFileContents > $iniFile
+}
+if($arguments.ContainsKey("margins")) {
+    $marginsParameter = $arguments["margins"];
+    $margins = $marginsParameter.Split(" ") | ForEach-Object { [int]::Parse($_) }
+    if($margins.Length -ne 4) { throw "Incorrect number of margin values specified. Please specify four numbers, separated by spaces, e.g. /margins:`"0 0 0 0`". You specified: '$marginsParameter'" }
+    "[Registry]" >> $iniFile
+    "HKCU\Software\FinePrint Software\pdfFactory5\FinePrinters\pdfFactory Pro\PrinterDriverData\MarginLeft=$margins[3]" >> $iniFile
+    "HKCU\Software\FinePrint Software\pdfFactory5\FinePrinters\pdfFactory Pro\PrinterDriverData\MarginTop=$margins[0]" >> $iniFile
+    "HKCU\Software\FinePrint Software\pdfFactory5\FinePrinters\pdfFactory Pro\PrinterDriverData\MarginRight=$margins[1]" >> $iniFile
+    "HKCU\Software\FinePrint Software\pdfFactory5\FinePrinters\pdfFactory Pro\PrinterDriverData\MarginBottom=$margins[2]" >> $iniFile
 }
 
 Install-ChocolateyInstallPackage $packageName $installerType $silentArgs $setup -validExitCodes $validExitCodes
