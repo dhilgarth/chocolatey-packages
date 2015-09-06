@@ -11,7 +11,7 @@ $languageMap = @{ "zh-CN" = "0804"; "zh-TW" = "0404"; "cs" = "0405"; "da" = "040
 $arguments = @{};
 
 if ($packageParameters) {
-    $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"  
+    $match_pattern = "\/(?<option>([a-zA-Z]+)):([`"'])?(?<value>([a-zA-Z0-9- _\\:\.]+))([`"'])?|\/(?<option>([a-zA-Z]+))"  
     #"
     $optionName = 'option'
     $valueName = 'value'
