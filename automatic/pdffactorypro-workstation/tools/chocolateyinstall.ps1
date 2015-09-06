@@ -45,6 +45,20 @@ if($arguments.ContainsKey("lang")) {
     $silentArgs = $silentArgs + " /lang=" + $languageMap[$arguments["lang"]]
 }
 
+if($arguments.ContainsKey("license")) {
+    $iniFile = Join-Path $extractDir "fpp5.ini"
+    $licenseCode = $arguments["license"]
+    $name = ""
+    if($arguments.ContainsKey("name")) { $name = $arguments["name"] }
+    $iniFileContents =
+@"
+[Settings]
+Name=$name
+SerialNumber=$licenseCode
+"@
+    $iniFileContents > $iniFile
+}
+
 Install-ChocolateyInstallPackage $packageName $installerType $silentArgs $setup -validExitCodes $validExitCodes
 
 rm $tempDir -Recurse
