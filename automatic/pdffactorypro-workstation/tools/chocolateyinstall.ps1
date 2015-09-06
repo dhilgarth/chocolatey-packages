@@ -42,7 +42,9 @@ Get-ChocolateyUnzip -fileFullPath $file -destination $extractDir
 
 $setup = Join-Path $extractDir "setup.exe"
 if($arguments.ContainsKey("lang")) {
-    $silentArgs = $silentArgs + " /lang=" + $languageMap[$arguments["lang"]]
+    $lang = $arguments["lang"]
+    if(!$languageMap.ContainsKey($lang)) { throw "Unknown language '$lang' specified. The following languages are available:`n" + [system]::string.Join("`n", $languageMap.Keys) }
+    $silentArgs = $silentArgs + " /lang=" + $languageMap[$lang]
 }
 
 if($arguments.ContainsKey("license")) {
