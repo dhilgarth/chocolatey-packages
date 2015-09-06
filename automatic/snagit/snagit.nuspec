@@ -11,7 +11,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Snagit is a image capture program from TechSmith.  It has a variety of capture modes (object, window, area, etc.) as well as video capture.  It also features a full-featured capture editing tool.</description>
         <releaseNotes>This package installs version {{PackageVersion}} of the program.</releaseNotes>
-        <language>es-US</language>
+        <language>en-US</language>
         <tags>screenshot screen capture</tags>
     </metadata>
     <files>
