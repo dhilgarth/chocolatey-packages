@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>{{PackageName}}</id>
+        <version>{{PackageVersion}}</version>
+        <title>pdfFactory Pro Workstation</title>
+        <authors>Fineprint Software</authors>
+        <projectUrl>http://fineprint.com/pdfp/</projectUrl>
+        <iconUrl>http://fineprint.com/wordpress/wp-content/themes/fineprint/images/pdfp.png</iconUrl>
+        <description>Easy, reliable PDF creation from all applications.
+        
+        You can pass the UI language:
+        
+        `-params '"/lang:en"'`
+        
+Available languages are:
+        
+* Czech: `cs`
+* Danish: `da`
+* Dutch: `nl`
+* English: `en`
+* French: `fr`
+* German: `de`
+* Italian: `it`
+* Japanese: `ja`
+* Polish: `pl`
+* Portuguese: `pt`
+* Russian: `ru`
+* Slovak: `sk`
+* Spanish: `es`
+* Swedish: `sv`
+
+NOTE: This package installs a printer driver. If you have UAC prompts enabled, you will need to confirm the driver installation.</description>
+        <language>en-US</language>
+        <tags>PDF printing letterhead</tags>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>

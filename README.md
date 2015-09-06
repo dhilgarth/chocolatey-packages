@@ -9,6 +9,7 @@ This repository hosts the code of the Chocolatey packages I am a maintainer of. 
     - TechSmith SnagIt (snagit)
     - Util Linux getopt (getopt)
     - Microsoft Office Professional Plus 2013 (OfficeProPlus2013)
+    - pdfFactory Pro - Workstation (pdffactorypro-workstation)
 - Manual Packages
     - git-flow AVH Edition (gitflow-avh)
 
