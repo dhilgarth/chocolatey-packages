@@ -38,7 +38,7 @@ Available languages are:
 
 Example:  
 
-`-params '"/lang:en /license:ABCDE-12345-FGHIJ /name:""John Doe"" /margins:""0 0 0 0"""'`
+`-params '/lang:en /license:ABCDE-12345-FGHIJ /name:""John Doe"" /margins:""0 0 0 0""'`
         
 NOTE: This package installs a printer driver. If you have UAC prompts enabled, you will need to confirm the driver installation.</description>
         <language>en-US</language>
