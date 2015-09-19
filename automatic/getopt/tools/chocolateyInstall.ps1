@@ -1,10 +1,11 @@
 ﻿$binUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVersion}}/util-linux-ng-{{PackageVersion}}-bin.zip/download'
 $depUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVersion}}/util-linux-ng-{{PackageVersion}}-dep.zip/download'
 
+$temp = (gi $env:TEMP).FullName
 $installDir = Join-Path (Get-BinRoot) "getopt"
-$downloadDir = Join-Path $env:TEMP "chocolatey\getopt"
 if (-not (Test-Path $installDir))
 {
+$downloadDir = Join-Path $temp "chocolatey\getopt"
     md $installDir
 }
 if (-not (Test-Path $downloadDir))
