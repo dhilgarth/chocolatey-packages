@@ -34,19 +34,16 @@ if (-not (Test-Path $gitBin))
     $gitBin = Join-Path "$gitDir" "mingw"
 }
 
-if (Test-Path $(Join-Path "$gitDir" "git-flow"))
-{
-    Write-Host "`nFound existing Git-Flow. Removing...`n"  -foregroundcolor yellow
-    Start-ChocolateyProcessAsAdmin "Get-ChildItem -path '$gitDir' -include 'git-flow*','gitflow-*','gitflow*' -recurse -force | Remove-Item -recurse -force" -minimized
-}
+Write-Host "`nRemoving existing Git-Flow, if any...`n"  -foregroundcolor yellow
+Get-ChildItem -path $gitDir -include 'git-flow*','gitflow-*','gitflow*' -recurse -force | Remove-Item -recurse -force
 
 Write-Host "`nGit-Flow: Cloning repository from GitHub and installing Git-Flow ...`n"  -foregroundcolor yellow
 
-Start-ChocolateyProcessAsAdmin "/c `"`"$exeGit`" clone --recursive `"$giturl`" `"$gitflowDir`"`"" -exe "$env:comspec" -minimized
-Start-ChocolateyProcessAsAdmin "/c `"`"$exeInstallGitFlow`" `"$gitBin`"`"" -exe "$env:comspec" -minimized
+Start-ChocolateyProcessAsAdmin "/c `"`"$exeGit`" clone --recursive `"$giturl`" `"$gitflowDir`"`"" -exe "$env:comspec"
+& "$exeInstallGitFlow" "$gitBin"
 if (Test-Path $gitBin64)
 {
-    Start-ChocolateyProcessAsAdmin "/c `"`"$exeInstallGitFlow`" `"$gitBin64`"`"" -exe "$env:comspec" -minimized
+    & "$exeInstallGitFlow" "$gitBin64"
 }
 
 Write-Host "`nGit-Flow: Setting up bash completion...`n"  -foregroundcolor yellow
