@@ -3,13 +3,11 @@ $depUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVe
 
 $temp = (gi $env:TEMP).FullName
 $installDir = Join-Path (Get-BinRoot) "getopt"
-if (-not (Test-Path $installDir))
-{
 $downloadDir = Join-Path $temp "chocolatey\getopt"
+if (-not (Test-Path $installDir)) {
     md $installDir
 }
-if (-not (Test-Path $downloadDir))
-{
+if (-not (Test-Path $downloadDir)) {
     md $downloadDir
 }
 
