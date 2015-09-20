@@ -1,13 +1,14 @@
+$toolsPath = (Split-Path -parent $MyInvocation.MyCommand.Definition)
+. "$toolsPath\extensions.ps1"
+
 # Refresh environment from registry
 Update-SessionEnvironment
 
-# Find any version
-$apps = @(Show-AppUninstallInfo -match "Git version [0-9\.]+(-preview\d*)?")
+$exeGit = Get-FullAppPath "Git version [0-9\.]+(-preview\d*)?" "cmd" "git.exe"
 
-if ($apps.Length -gt 0)
+if ($exeGit -ne $null)
 {
-    $app = $apps[0]
-    $gitDir = $app["InstallLocation"]
+    $gitDir = (Get-Item $exeGit).Directory.Parent.FullName
 
     Write-Host "`nUninstalling Git-Flow from detected Git location: $gitDir`n" -foregroundcolor yellow
 
