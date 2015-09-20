@@ -46,5 +46,6 @@ NOTE: This package installs a printer driver. If you have UAC prompts enabled, y
     </metadata>
     <files>
         <file src="tools\**" target="tools" />
+        <file src="..\..\extensions.ps1" target="tools" />
     </files>
 </package>
