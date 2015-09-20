@@ -30,7 +30,7 @@ if ($packageParameters) {
     }
 }
 
-$chocTempDir = Join-Path $env:TEMP "chocolatey"
+$chocTempDir = Join-Path (Get-Item $env:TEMP).FullName "chocolatey"
 $tempDir = Join-Path $chocTempDir "$packageName"
 $extractDir = Join-Path $tempDir "pdffactorypro-workstation"
 
