@@ -12,7 +12,7 @@ $exeGit = Get-FullAppPath "Git version [0-9\.]+(-preview\d*)?" "cmd" "git.exe"
 # so we are using absolute filenames. Everything must be executed
 # with elevated privileges
 #
-$gitDir = (gi $exeGit).Directory.Parent.FullName
+$gitDir = (Get-Item $exeGit).Directory.Parent.FullName
 $gitflowDir = Join-Path "$gitDir" "gitflow"
 $exeInstallGitFlow = Join-Path "$gitflowDir" "contrib\msysgit-install.cmd"
 $gitBin = Join-Path "$gitDir" "usr"
