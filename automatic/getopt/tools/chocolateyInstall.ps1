@@ -2,7 +2,7 @@
 $depUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVersion}}/util-linux-ng-{{PackageVersion}}-dep.zip/download'
 
 $temp = (gi $env:TEMP).FullName
-$installDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+$installDir = Join-Path (Split-Path -parent $toolsPath) "binaries"
 $downloadDir = Join-Path $temp "chocolatey\getopt"
 if (-not (Test-Path $installDir)) {
     md $installDir

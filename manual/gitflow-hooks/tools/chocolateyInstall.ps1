@@ -8,7 +8,7 @@ Update-SessionEnvironment
 
 $exeGit = Get-FullAppPath "Git version [0-9\.]+(-preview\d*)?" "cmd" "git.exe"
 
-$installDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+$installDir = Join-Path (Split-Path -parent $toolsPath) "repository"
 $config = Join-Path $installDir "git-flow-hooks-config.sh"
 
 Start-ChocolateyProcessAsAdmin "/c `"`"$exeGit`" clone --recursive `"$giturl`" `"$installDir`"`"" -exe "$env:comspec"

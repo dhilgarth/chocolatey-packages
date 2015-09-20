@@ -8,4 +8,5 @@ $exeGit = Get-FullAppPath "Git version [0-9\.]+(-preview\d*)?" "cmd" "git.exe"
 
 & "$exeGit" config --global --unset gitflow.path.hooks
 
-rm $installDir = Join-Path (Get-BinRoot) "gitflow-hooks"
+$installDir = Join-Path (Split-Path -parent $toolsPath) "repository"
+rm $installDir
