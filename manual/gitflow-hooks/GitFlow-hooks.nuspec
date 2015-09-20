@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>gitflow-hooks</id>
+    <version>0.0.0</version>
+    <title>git-flow hooks</title>
+    <authors>Jasper N. Brouwer</authors>
+    <owners>Daniel Hilgarth</owners>
+    <licenseUrl>https://github.com/jaspernbrouwer/git-flow-hooks/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jaspernbrouwer/git-flow-hooks</projectUrl>
+    <iconUrl>https://github.com/michfield/devbox-choco/raw/master/Devbox-GitFlow/Devbox-GitFlow.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+        Some useful hooks for [git-flow (AVH Edition)](https://chocolatey.org/packages/gitflow-avh).
+        NOTE: This package always installs the latest version, so the package version will always be 0.0.0.</description>
+    <summary>Some useful hooks for git-flow (AVH Edition).</summary>
+    <copyright>Copyright: Jasper N. Brouwer</copyright>
+    <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh hooks</tags>
+    <dependencies>
+      <dependency id="gitflow-avh" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\..\extensions.ps1" target="tools" />
+  </files>
+</package>
