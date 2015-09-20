@@ -21,8 +21,11 @@
     <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh</tags>
     <dependencies>
       <dependency id="git" />
-      <dependency id="devbox-common.extension" />
       <dependency id="getopt" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\..\extensions.ps1" target="tools" />
+  </files>
 </package>

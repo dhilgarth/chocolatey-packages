@@ -1,30 +1,19 @@
-﻿$giturl = "https://github.com/petervanderdoes/gitflow.git"
+﻿$toolsPath = (Split-Path -parent $MyInvocation.MyCommand.Definition)
+. "$toolsPath\extensions.ps1"
+
+$giturl = "https://github.com/petervanderdoes/gitflow.git"
 
 # Refresh environment from registry
 Update-SessionEnvironment
 
-# Detect Git
-$apps = @(Show-AppUninstallInfo -match "Git version [0-9\.]+(-preview\d*)?")
-
-if ($apps.Length -eq 0)
-{
-    throw "Could not detect a valid Git installation"
-}
-
-$app = $apps[0]
-$gitDir = $app["InstallLocation"]
-
-if (-not (Test-Path "$gitDir"))
-{
-    throw "Local Git installation is detected, but directories are not accessible or have been removed"
-}
+$exeGit = Get-FullAppPath "Git version [0-9\.]+(-preview\d*)?" "cmd" "git.exe"
 
 # Now clone the repository. Git executable could not be in PATH
 # so we are using absolute filenames. Everything must be executed
 # with elevated privileges
 #
+$gitDir = (gi $exeGit).Directory.Parent.FullName
 $gitflowDir = Join-Path "$gitDir" "gitflow"
-$exeGit = Join-Path "$gitDir" "cmd\git.exe"
 $exeInstallGitFlow = Join-Path "$gitflowDir" "contrib\msysgit-install.cmd"
 $gitBin = Join-Path "$gitDir" "usr"
 $gitBin64 = Join-Path "$gitDir" "mingw64"
