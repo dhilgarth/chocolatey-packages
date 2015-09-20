@@ -73,8 +73,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>384846</LastFileSize>
-    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <LastFileSize>840360</LastFileSize>
+    <LastFileDate>2015-07-24T03:52:53+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,14 +93,14 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>Textual</VariableType>
+            <Regex>file-link-view1"&gt;&lt;a href=\"http://[^"]*/officedeploymenttool_x86_(\d{4})-\d{4}.exe"</Regex>
             <Url>http://www.microsoft.com/en-us/download/confirmation.aspx?id=36778</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
-            <TextualContent />
+            <TextualContent>15.0.{subVersion}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -133,6 +133,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>subVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>file-link-view1"&gt;&lt;a href=\"http://[^"]*/officedeploymenttool_x86_(\d{4})-\d{4}.exe"</Regex>
+            <Url>http://www.microsoft.com/en-us/download/confirmation.aspx?id=36778</Url>
+            <Name>subVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -140,13 +154,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation />
+    <PreviousLocation>C:\Chocolatey\_work\officedeploymenttool_x86_4747-1000.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <LastUpdated>2015-09-19T03:51:52.1884805+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{downloadUrl}</FixedDownloadUrl>
-    <Name>MS Office 2013 Professional</Name>
+    <Name>OfficeProPlus2013</Name>
   </ApplicationJob>
 </Jobs>

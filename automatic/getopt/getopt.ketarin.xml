@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="472570c8-5c99-4594-a167-08d4353bd290">
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="febc6385-1da8-44e7-9d16-0598adef4a83">
     <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
@@ -29,7 +29,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url><placeholder name="Url with version information" value="http://fineprint.com/pdfp/" /></Url>
+            <Url><placeholder name="Url with version information" value="" /></Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -66,15 +66,15 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="{downloadUrl}" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="pdfFactory Pro Workstation" /></Name>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="getopt" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>7703880</LastFileSize>
-    <LastFileDate>2015-09-15T23:45:50.1007631</LastFileDate>
+    <LastFileSize>1588160</LastFileSize>
+    <LastFileDate>2008-09-28T18:46:38+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -94,12 +94,13 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>href="[^"]*"&gt;DOWNLOAD v(\d+\.\d+)</Regex>
-            <Url>http://fineprint.com/pdfp/</Url>
-            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
-  &lt;TR&gt;
-    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
-            <EndText>&lt;BR&gt;</EndText>
+            <Regex>&lt;tr title="(\d+.\d+.\d+)" class="folder "&gt;</Regex>
+            <Url>http://sourceforge.net/projects/gnuwin32/files/util-linux/</Url>
+            <StartText>&lt;td headers="files_downloads_h" class="opt"&gt;&lt;/td&gt;
+                    &lt;td headers="files_status_h"&gt;
+</StartText>
+            <EndText>class="folder "&gt;
+</EndText>
             <TextualContent />
             <Name>version</Name>
           </UrlVariable>
@@ -119,20 +120,6 @@
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>downloadUrl</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>href="([^"]*)"&gt;DOWNLOAD v\d+\.\d+</Regex>
-            <Url>http://fineprint.com/pdfp/</Url>
-            <Name>downloadUrl</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -140,13 +127,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\pdf532pro.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\util-linux-ng-2.14.1-bin.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-09-15T23:45:50.1007631</LastUpdated>
+    <LastUpdated>2015-09-19T13:33:52.2173636+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{downloadUrl}</FixedDownloadUrl>
-    <Name>pdffactorypro-workstation</Name>
+    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/gnuwin32/util-linux/{version}/util-linux-ng-{version}-bin.zip</FixedDownloadUrl>
+    <Name>getopt</Name>
   </ApplicationJob>
 </Jobs>
