@@ -19,7 +19,7 @@ $arguments = (ParseParameters $env:chocolateyPackageParameters)
 # Instructions for silent installation: http://support.balsamiq.com/customer/portal/articles/133390
 $installPath = Join-Path $programFiles86 "Balsamiq Mockups 3"
 
-# Download and extract ZIP file
+# Extract embedded ZIP file
 Get-ChocolateyUnzip -fileFullPath $file -destination "$programFiles86"
 Write-Host "Moving application files..."
 Rename-Item (Join-Path $programFiles86 'Balsamiq_Mockups_3') $installPath
