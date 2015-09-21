@@ -16,6 +16,7 @@ This repository hosts the code of the Chocolatey packages I am a maintainer of. 
     - NCrunch for Visual Studio 2013 (ncrunch-vs2013)
     - NCrunch for Visual Studio 2015 (ncrunch-vs2015)
     - NCrunch Grid Node Server (ncrunch-gridnodeserver)
+    - git-flow hooks (git-flow-hooks)
 - Manual Packages
     - git-flow AVH Edition (gitflow-avh)
 
