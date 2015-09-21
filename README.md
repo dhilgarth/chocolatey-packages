@@ -10,6 +10,7 @@ This repository hosts the code of the Chocolatey packages I am a maintainer of. 
     - Util Linux getopt (getopt)
     - Microsoft Office Professional Plus 2013 (OfficeProPlus2013)
     - pdfFactory Pro - Workstation (pdffactorypro-workstation)
+    - MP3 Skype Recorder (mp3skyperecorder)
     - Balsamiq Mockups 3 (balsamiqmockups3)
     - NCrunch for Visual Studio 2012 (ncrunch-vs2012)
     - NCrunch for Visual Studio 2013 (ncrunch-vs2013)
