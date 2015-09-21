@@ -9,12 +9,21 @@
         <projectUrl>http://www.techsmith.com/snagit.html</projectUrl>
         <iconUrl>https://cdn.rawgit.com/DavidPx/chocolatey-packages/master/TechsmithSnagit/SnagitIcon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Snagit is a image capture program from TechSmith.  It has a variety of capture modes (object, window, area, etc.) as well as video capture.  It also features a full-featured capture editing tool.</description>
+        <description>Snagit is a image capture program from TechSmith.  It has a variety of capture modes (object, window, area, etc.) as well as video capture.  It also features a full-featured capture editing tool.
+               
+NOTE: This installs a trial version. You can register it using the following parameter:
+
+* License code: `/licenseCode:"&lt;your license code&gt;"`
+
+Example:
+
+`-params '/licenseCode:AB1CD-EF2GH-IJ3KL-MN4OP-QR5ST'`</description>
         <releaseNotes>This package installs version {{PackageVersion}} of the program.</releaseNotes>
         <language>en-US</language>
         <tags>screenshot screen capture</tags>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />
+        <file src="..\..\..\..\extensions.ps1" target="tools" />
     </files>
 </package>
