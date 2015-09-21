@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ncrunch-gridnodeserver</id>
+    <version>{{PackageVersion}}</version>
+    <authors>Remco Software Ltd.</authors>
+	<licenseUrl>http://www.ncrunch.net/legal/eula</licenseUrl>
+    <projectUrl>http://www.ncrunch.net/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/TomOne/various/28ace8fd94797c2707d2a16fa8cd87bd1c8f8ce2/ncrunch.png</iconUrl>
+    <copyright>Remco Software Ltd.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>http://www.ncrunch.net/download/showChangeLog?version={{PackageGuid}}</releaseNotes>
+    <title>NCrunch Grid Node Server</title>
+    <summary>NCrunch is an automated concurrent testing tool for Visual Studio.</summary>
+    <description>NCrunch is an automated concurrent testing tool for Visual Studio 2015.  
+    It intelligently runs automated tests so that you don't have to, and gives you a huge amount of useful information about your tested code, such as code coverage and performance metrics, inline in your IDE while you type.  
+    This is its Grid Node Server that allows distributed execution of the tests. See [the documentation](https://www.ncrunch.net/documentation/guides_distributed-processing) for more details.</description>
+    <tags>ncrunch vs2015 vs2013 vs2012 admin testing automation tdd grid</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
