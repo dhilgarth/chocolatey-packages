@@ -1,16 +1,16 @@
-function ParseParameters ([string]$parameters) {
+function global:ParseParameters ([string]$parameters) {
     $arguments = @{};
 
     if ($parameters) {
-        $match_pattern = "(?:\s*)(?<=[-|/])(?<option>\w*)[:|=](`"((?<value>.*?)(?<!\\)`")|(?<value>[\w]*))"
-        #"
-        $optionName = 'option'
+        $match_pattern = "/(((?<name>[a-zA-Z0-9-_]+)[:=]((""(?<value>(?:[^""\\]|\\.)+)"")|(?<value>[^ ]+)))|((?<name>(?>[a-zA-Z0-9-_]+))(?!:)))"
+        
+        $optionName = 'name'
         $valueName = 'value'
         
         if ($parameters -match $match_pattern ){
             $results = $parameters | Select-String $match_pattern -AllMatches
             $results.matches | % {
-              $arguments.Add(
+                $arguments.Add(
                   $_.Groups[$optionName].Value.Trim(),
                   $_.Groups[$valueName].Value.Trim())
           }
@@ -198,7 +198,7 @@ function global:Get-AppInstallLocation() {
     return $installLocation
 }
 
-function global:Get-FullAppPath ([string]$uninstallName, [string]$relativePath, [string]$executable) {
+function global:Get-FullAppPath ([string]$uninstallName, [string]$relativePath, [string]$executable, [string]$installFolderName) {
 
     function GetInstalledApp ([string]$uninstallName, [string]$relativePath, [string]$executable) {
         $apps = @(Show-AppUninstallInfo -match $uninstallName)
@@ -209,7 +209,7 @@ function global:Get-FullAppPath ([string]$uninstallName, [string]$relativePath, 
         {
             $app = $apps[0]
             $dir = $app["InstallLocation"]
-            if (Test-Path "$dir") {
+            if ((![string]::IsNullOrEmpty($dir)) -and (Test-Path "$dir")) {
                 $exe = (Join-Path "$dir" (Join-Path $relativePath $executable))
             }
         }
@@ -231,8 +231,41 @@ function global:Get-FullAppPath ([string]$uninstallName, [string]$relativePath, 
         }
     }
 
+    function FindInProgramsFolder([string]$programsFolder, [string]$installFolderName, [string]$relativePath, [string]$executable) {
+        $installDir = Join-Path $programsFolder $installFolderName
+        if(Test-Path $installDir) {
+            $fullPath = Join-Path $installDir (Join-Path $relativePath $executable)
+            if(Test-Path $fullPath) {
+                return $fullPath
+            }
+        }
+    }
+
+    function FindInProgramFiles([string]$installFolderName, [string]$relativePath, [string]$executable) {
+        $fullPath = FindInProgramsFolder $env:ProgramFiles $installFolderName $relativePath $executable
+        if(($fullPath -ne $null) -and (Test-Path $fullPath)) {
+            return $fullPath
+        }
+        $fullPath = FindInProgramsFolder ${env:ProgramFiles(x86)} $installFolderName $relativePath $executable
+        if(($fullPath -ne $null) -and (Test-Path $fullPath)) {
+            return $fullPath
+        }
+    }
+
     $exe = $null
 
+    if($exe -eq $null) {
+        if($PSBoundParameters.ContainsKey('uninstallName') -and $PSBoundParameters.ContainsKey('relativePath') -and $PSBoundParameters.ContainsKey('executable')) {
+            $exe = GetInstalledApp $uninstallName $relativePath $executable
+        }
+    }
+
+    if($exe -eq $null) {
+        if($PSBoundParameters.ContainsKey('installFolderName') -and $PSBoundParameters.ContainsKey('relativePath') -and $PSBoundParameters.ContainsKey('executable')) {
+            $exe = FindInProgramFiles $installFolderName $relativePath $executable
+        }
+    }
+    
     if($exe -eq $null) {
         try {
             $exe = (Get-Command $executable -ErrorAction SilentlyContinue).Definition;
@@ -245,11 +278,6 @@ function global:Get-FullAppPath ([string]$uninstallName, [string]$relativePath, 
         $exe = FindInAppPaths $executable
     }
 
-    if($exe -eq $null) {
-        if($PSBoundParameters.ContainsKey('uninstallName') -and $PSBoundParameters.ContainsKey('relativePath') -and $PSBoundParameters.ContainsKey('executable')) {
-            $exe = GetInstalledApp $uninstallName $relativePath $executable
-        }
-    }
 
     if($exe -eq $null) {
         throw "Unable to find $executable"
