@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>gitflow-hooks</id>
-    <version>0.0.0</version>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
     <title>git-flow hooks</title>
     <authors>Jasper N. Brouwer</authors>
     <owners>Daniel Hilgarth</owners>
@@ -12,7 +12,12 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
         Some useful hooks for [git-flow (AVH Edition)](https://chocolatey.org/packages/gitflow-avh).
-        NOTE: This package always installs the latest version, so the package version will always be 0.0.0.</description>
+        
+        You can specify `/global=true` as a parameter to install git-flow hooks globally for all repositories.
+        Example:  
+
+`-params '/global=true'`
+    </description>
     <summary>Some useful hooks for git-flow (AVH Edition).</summary>
     <copyright>Copyright: Jasper N. Brouwer</copyright>
     <tags>vcs scm git gitflow git-flow git-flow-avh gitflow-avh hooks</tags>
@@ -22,6 +27,6 @@
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="..\..\extensions.ps1" target="tools" />
+    <file src="..\..\..\..\extensions.ps1" target="tools" />
   </files>
 </package>
