@@ -1,6 +1,7 @@
 ﻿$binUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVersion}}/util-linux-ng-{{PackageVersion}}-bin.zip/download'
 $depUrl = 'http://sourceforge.net/projects/gnuwin32/files/util-linux/{{PackageVersion}}/util-linux-ng-{{PackageVersion}}-dep.zip/download'
 
+$toolsPath = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 $temp = (gi $env:TEMP).FullName
 $installDir = Join-Path (Split-Path -parent $toolsPath) "binaries"
 $downloadDir = Join-Path $temp "chocolatey\getopt"
