@@ -14,7 +14,7 @@
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/dhilgarth/chocolatey-packages/e59b6fcf7f2b3bc3e500ce4438fb85e11f0aaa49/icons/procmon.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Version according to SysInternals website: {{PackageGuid}}</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
