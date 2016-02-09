@@ -17,7 +17,7 @@ NOTE: This installs a trial version. You can register it using the following par
 
 Example:
 
-`-params '/licenseCode:AB1CD-EF2GH-IJ3KL-MN4OP-QR5ST'`</description>
+`-params '"/licenseCode:AB1CD-EF2GH-IJ3KL-MN4OP-QR5ST"'`</description>
         <releaseNotes>This package installs version {{PackageVersion}} of the program.</releaseNotes>
         <language>en-US</language>
         <tags>screenshot screen capture</tags>
