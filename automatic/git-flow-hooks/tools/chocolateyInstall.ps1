@@ -21,6 +21,6 @@ else {
 & "$exeGit" checkout tags/v{{PackageVersion}} 2>&1 | write-host
 
 $arguments = (ParseParameters $env:chocolateyPackageParameters)
-if(($arguments.ContainsKey("global")) -and ($arguments["global"] -eq "true")) {
+if($arguments.ContainsKey("global")) {
     & "$exeGit" config --global --replace gitflow.path.hooks $installDir
 }

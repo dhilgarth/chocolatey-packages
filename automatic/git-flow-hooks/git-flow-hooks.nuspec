@@ -13,10 +13,10 @@
     <description>
         Some useful hooks for [git-flow (AVH Edition)](https://chocolatey.org/packages/gitflow-avh).
         
-        You can specify `/global=true` as a parameter to install git-flow hooks globally for all repositories.
+        You can specify `/global` as a parameter to install git-flow hooks globally for all repositories.
         Example:  
 
-`-params '/global=true'`
+`-params '"/global"'`
     </description>
     <summary>Some useful hooks for git-flow (AVH Edition).</summary>
     <copyright>Copyright: Jasper N. Brouwer</copyright>
