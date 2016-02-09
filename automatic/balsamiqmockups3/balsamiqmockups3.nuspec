@@ -34,5 +34,6 @@ For questions about this package, please leave a comment on the package page at 
   <files>
     <file src="tools\**" target="tools" />
     <file src="{{PackageFilePath}}" target="application" />
+    <file src="redistribute-license.pdf" target="legal" />
   </files>
 </package>
