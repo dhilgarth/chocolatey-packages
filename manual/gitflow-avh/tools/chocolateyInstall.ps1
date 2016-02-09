@@ -36,4 +36,4 @@ if (Test-Path $gitBin64)
 }
 
 Write-Host "`nGit-Flow: Setting up bash completion...`n"  -foregroundcolor yellow
-wget https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash -OutFile (Join-Path "$gitDir" "etc\profile.d\git-flow-completion.sh")
+Invoke-WebRequest https://raw.githubusercontent.com/petervanderdoes/git-flow-completion/develop/git-flow-completion.bash -OutFile (Join-Path "$gitDir" "etc\profile.d\git-flow-completion.sh")
