@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>{{PackageName}}</id>
+        <version>{{PackageVersion}}</version>
+        <title>Room Arranger</title>
+        <authors>Jan Adamec</authors>
+        <licenseUrl>http://www.roomarranger.com/wiki/doku.php?id=licensing</licenseUrl>
+        <projectUrl>http://www.roomarranger.com/</projectUrl>
+        <iconUrl>http://www.roomarranger.com/img/dl_ralogo.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>
+        Room Arranger is a 3D room / apartment / floor planner with a simple user interface. Once you get the basics, you can draw whatever you imagine. While having a wide library of objects, you can easily create your own piece of furniture.
+        </summary>
+        <description>
+        Room Arranger is a 3D room / apartment / floor planner with a simple user interface. Once you get the basics, you can draw whatever you imagine. While having a wide library of objects, you can easily create your own piece of furniture.  
+        Room Arranger can show your project in 3D. It uses the VRML standard for it.
+        
+NOTE: This installs a 30 day shareware. You can register it using the following parameters:
+
+* License code: `/licenseCode:"&lt;your license code>"`
+* Name of the license holder: `/licenseName:"&lt;your name>"`
+
+Example:
+
+`-params '"/licenseCode:1234-5678-900 /licenseName:""John Doe"""'`
+        </description>
+        <releaseNotes>http://www.roomarranger.com/whatsnew.txt</releaseNotes>
+        <language>en-US</language>
+        <tags>floor apartment planner 3d room arranger</tags>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+        <file src="..\..\..\..\extensions.ps1" target="tools" />
+    </files>
+</package>
