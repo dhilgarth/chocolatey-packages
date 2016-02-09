@@ -23,7 +23,7 @@ This package supports registration during install. Just pass the following param
 
 Example:
 
-`-params '/licenseCode:""abcd1234=="" /licenseName:""John Doe""'`
+`-params '"/licenseCode:""abcd1234=="" /licenseName:""John Doe"""'`
 
 For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups3 or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.</description>
     <summary>Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.</summary>
